@@ -17,7 +17,7 @@ const client = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
 
-const LOAD_SLASH = process.argv[2] == "load";
+//const LOAD_SLASH = process.argv[2] == "load";
 
 const handlers = ['command_handler', 'event_handler'];
 
@@ -30,8 +30,8 @@ for(const handler of handlers){
 }
 
 
-client.slashcommands = new Discord.Collection();
-
+//client.slashcommands = new Discord.Collection();
+/*
 let commands = [];
 
 const slashFiles = fs.readdirSync("./slash").filter(file => file.endsWith(".js"));
@@ -56,6 +56,7 @@ if (LOAD_SLASH) {
         }
     });
 }
+*/
 
 /*
 //make sure to check out play command to ignore the playing msg
