@@ -23,7 +23,6 @@ module.exports = (client) =>{
 	getQuote().then(quote => {
 			const nothingham = client.guilds.cache.get(process.env.guildId);
 			const inspiration = nothingham.channels.cache.get(process.env.inspiration);
-			client.users.send(process.env.jessil, quote);
 			inspiration.send(quote);
 
 		});
